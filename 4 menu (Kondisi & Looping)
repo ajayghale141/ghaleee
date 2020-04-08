@@ -15,8 +15,7 @@ class journal4{
 	System.out.println("2. Factorial");
 	System.out.println("3. X on Box");
 	System.out.println("4. Nazi");
-	System.out.println("5. Nama Panggilan");
-	System.out.print("Pilih [1-5] : ");
+	System.out.print("Pilih [1-4] : ");
 	input = inp.nextInt();
 			switch(input){
 			case 1:
@@ -33,10 +32,6 @@ class journal4{
 				break;
 			case 4:
 				naziuduk();
-				check=0;
-				break;
-			case 5:
-				nametag();
 				check=0;
 				break;
 			default:
@@ -116,7 +111,7 @@ class journal4{
 			System.out.println("Inputan Tidak Menghasilkan Pola");
 		}
 	}
-	void naziuduk(){
+	void nazi(){
 		for(int x=1; x<=7;x++){
 			for(int y=1;y<=7;y++){
 				if(x==4 || y==4 || x==1&&y==1 || x==2&&y==1 || x==3&&y==1 || x==4&&y==1 || y==5&&x==1 || y==6&&x==1 || y==7&&x==1 || y==7&&x==5 || y==7&&x==6 || y==7&&x==7 || x==7&&y==1 || x==7&&y==2 || x==7&&y==3){
@@ -127,34 +122,6 @@ class journal4{
 		
 		}
 		System.out.println();
-		}
-	}
-	void nametag(){
-		for(int x=1; x<=4;x++){
-			for(int y=1;y<=18;y++){
-				if(y==1 || y==5 || y==16){
-					System.out.print("|");
-				}
-				else if(x==2&&y==2 || x==2&&y==11 || x==3&&y==12 || x==4&&y==13){
-					System.out.print("\\");
-				}
-				else if(x==3&&y==3){
-					System.out.print("V");
-				}
-				else if(x==2&&y==4 || x==4&&y==7 || x==3&&y==8 || x==2&&y==9){
-					System.out.print("/");
-				}
-				else if(x==1&&y==10){
-					System.out.print("^");
-				}
-				else if(x==3&&y==9 || x==3&&y==10 || x==3&&y==11 || x==1&&y==15 || x==1&&y==17 || x==1&&y==18 || x==1&&y==14){
-					System.out.print("-");
-				}
-				else{
-				System.out.print(" ");
-				}
-			}
-			System.out.println();
 		}
 	}
 }
