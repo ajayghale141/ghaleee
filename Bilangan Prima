@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Prima{
+		Scanner inp = new Scanner(System.in);
+		int batas;
+	public static void main(String[] wasd){
+		Prima pr = new Prima();
+		pr.runThis();
+	}
+	void runThis(){
+		System.out.println("Deret nilai");
+		System.out.print("Masukkan Batas : ");
+		batas = inp.nextInt();
+		cekBilanganPrima(batas);
+	}
+	void cekBilanganPrima(int batas){
+		System.out.print("Bilangan Prima : ");
+		for (int i = 2; i < batas; i++) {
+         boolean cekPrima = true;
+         for (int j = 2; j < i; j++) {
+             if(i%j==0){
+                 cekPrima = false;
+                 break;
+             }
+         }
+
+         if(cekPrima==true){
+         System.out.print(i+" ");
+    }
+	}
+	}
+}
