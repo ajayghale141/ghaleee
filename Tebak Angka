@@ -1,0 +1,40 @@
+import java.util.Random;
+import java.util.Scanner;
+class TebakAngka{
+		Scanner inp = new Scanner(System.in);
+		Random gen = new Random();
+		int nilai = gen.nextInt(100);
+		int max =100;
+		int min =0;
+		int ctr =0;
+		int tebak;
+	public static void main(String[] wasd){
+		TebakAngka ta = new TebakAngka();
+		ta.runThis();
+	}
+	void runThis(){
+		do{
+		System.out.print("Tebak Angka Antara "+min+"-"+max+" :");
+		tebak = inp.nextInt();
+			if((tebak>=min)&&(tebak<=max)){
+				if (tebak==nilai)
+				System.out.println("tebakan anda benar");
+				else if (tebak>nilai) {
+				System.out.println("tebakan anda lebih besar");
+				max=tebak;
+				}
+				else {
+				System.out.println("tebakan anda lebih kecil");
+				min=tebak;
+				}
+			}
+			else {
+				System.out.println("Tebakan diluar rentang");
+				System.out.println("Tebak antara "+min+" dan "+max);
+			} ctr = ctr+1;
+		}
+		while(tebak!=nilai);
+			System.out.println("Nilai yang dicari adalah : "+nilai);
+			System.out.println("Berhasil menebak dalam "+ctr+" kali");
+}
+}
